@@ -7,6 +7,7 @@ import java.math.BigDecimal;
 
 /**
  * Created by zhe on 2016/2/22.
+ * Android清理数据工具类
  */
 public class DataCleanManager {
     /**
