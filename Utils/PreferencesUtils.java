@@ -5,7 +5,7 @@ import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
 
 /**
- * SharePreferences配置项
+ * Android_SharePreferences
  */
 public class PreferencesUtils {
 	private static SharedPreferences pref = null;
