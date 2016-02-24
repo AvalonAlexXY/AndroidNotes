@@ -20,6 +20,7 @@ import android.view.View;
  *                                                              innerColor(0xFFE6454A).
  *                                                              outerColor(0xFF666666).
  *                                                              format();
+ * textview.setText(chars);
  * </pre>
  * <ul>
  * <li>Surround keys with curly braces; use two {{ to escape.</li>
