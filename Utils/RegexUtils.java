@@ -13,4 +13,14 @@ public class RegexUtils {
         Matcher m = p.matcher(mobile);
         return m.matches();
     }
+
+    /**
+	 * 判断是否含有中文
+	 * @param source
+	 * @return
+	 */
+	public static boolean isHaveChinese(String source) {
+		String regx = "^[\\x01-\\xff]{1,}";
+		return !Pattern.matches(regx, source);
+	}
 }
