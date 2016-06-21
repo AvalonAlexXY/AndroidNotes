@@ -1,4 +1,5 @@
-/**
+public class getFileMd5 {
+    /**
      * 获取文件的md5值
      *
      * @param path 文件的全路径名称
@@ -33,3 +34,4 @@
             return "";
         }
     }
+}
