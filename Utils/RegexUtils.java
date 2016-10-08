@@ -5,6 +5,31 @@ import java.util.regex.Pattern;
  * Created by zhe on 2016/3/8.
  */
 public class RegexUtils {
+
+	/**
+     * 提取html中的纯文本
+     *
+     * @param html 源文件
+     * @return 纯文本文件
+     */
+    public static String textFromHtml(String html) {
+        html = html.replaceAll("&nbsp;", "");
+        html = html.replaceAll("<[^>]*>", "");
+        return html;
+    }
+
+    /**
+     * 是否是7牛的图片
+     *
+     * @param url 需要检验的url
+     * @return 是否是七牛图片
+     */
+    public static boolean isQiniuImgUrl(String url) {
+        Pattern p = Pattern.compile("(.*)(qiniucdn.com|clouddn.com|s.huodongdashi.com)+(.*)");
+        Matcher m = p.matcher(url);
+        return m.matches();
+    }
+    
 	/**
 	 * 判断是否是手机号
 	 */
