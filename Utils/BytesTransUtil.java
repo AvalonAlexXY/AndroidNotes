@@ -8,6 +8,7 @@ import java.nio.ByteOrder;
  */
 
 public class BytesTransUtil {
+
     private static BytesTransUtil instance = null;
 
     private BytesTransUtil() {
