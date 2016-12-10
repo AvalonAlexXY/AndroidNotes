@@ -5,7 +5,66 @@ import java.util.regex.Pattern;
  * Created by zhe on 2016/3/8.
  */
 public class RegexUtils {
+	 /**
+     * 字符串倒序输出
+     *
+     * @return 倒序后的字符串
+     */
+    public static String reverseString(String str) {
+        StringBuilder sb = new StringBuilder(str);
+        return sb.reverse().toString();
+    }
+/**
+     * 将字符串转成Sha1值
+     *
+     * @param data 需要转换的字符串
+     * @return 字符串的Sha1值
+     */
+    public static String stringToSha1(String data) {
+        StringBuilder buf = new StringBuilder();
+        try {
+            MessageDigest md = MessageDigest.getInstance("SHA1");
+            md.update(data.getBytes());
+            byte[] bits = md.digest();
+            for (byte bit : bits) {
+                int a = bit;
+                if (a < 0)
+                    a += 256;
+                if (a < 16)
+                    buf.append("0");
+                buf.append(Integer.toHexString(a));
+            }
+        } catch (NoSuchAlgorithmException e) {
+            e.printStackTrace();
+        }
+        return buf.toString();
+    }
 
+    /**
+     * 将字符串转成MD5值
+     *
+     * @param data 需要转换的字符串
+     * @return 字符串的MD5值
+     */
+    public static String stringToMD5(String data) {
+        StringBuilder buf = new StringBuilder();
+        try {
+            MessageDigest md = MessageDigest.getInstance("MD5");
+            md.update(data.getBytes());
+            byte[] bits = md.digest();
+            for (byte bit : bits) {
+                int a = bit;
+                if (a < 0)
+                    a += 256;
+                if (a < 16)
+                    buf.append("0");
+                buf.append(Integer.toHexString(a));
+            }
+        } catch (NoSuchAlgorithmException e) {
+            e.printStackTrace();
+        }
+        return buf.toString();
+    }
 	/**
      * 提取html中的纯文本
      *

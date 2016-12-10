@@ -1,0 +1,11 @@
+public static void GoCommonActivity(Context context, String path, String payload) {
+    Intent in = new Intent(context, CommonActivity.class);
+    in.putExtra(CommonActivity.FRAGMENT_PATH, path);
+    in.putExtra(CommonActivity.FRAGMENT_PARAM, payload);
+    in.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+    context.startActivity(in);
+}
+
+ActivityUtil.GoCommonActivity(mActivity, Constants.FRAGMENT_PATH_FORGET_PWD, "");
+
+public static final String FRAGMENT_PATH_FORGET_PWD = "com.meishubao.app.mine.ForgetPwdFragment";
