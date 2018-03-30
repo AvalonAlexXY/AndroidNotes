@@ -1,14 +1,7 @@
-package com.uuloop.adclient.manager;
-
 import android.app.ActivityManager;
 import android.content.Context;
 import android.os.Debug;
 import android.renderscript.Sampler;
-
-import com.uuloop.adclient.AdClientApplication;
-import com.uuloop.adclient.util.FileUtil;
-import com.uuloop.adclient.util.Logger;
-import com.uuloop.adclient.util.TimeUtil;
 
 import java.io.RandomAccessFile;
 import java.util.List;
